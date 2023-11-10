@@ -1,0 +1,367 @@
+/* ------------------------------------------------------------------ 
+[Master Stylesheet]
+
+Project:    Fitness Center
+Version:    1.0
+Last change:    05/19/2023
+Assigned to:    ArielVW
+Primary use:    Landing Page 
+------------------------------------------------------------------- */
+
+@import "./reset.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  width: 15%;
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 6px 6px -6px rgba(0, 0, 0, 0.5);
+}
+.line {
+  width: 60%;
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.header {
+  height: 18vw;
+  background-color: #000;
+}
+.header .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 100%;
+}
+.header .row .column-01,
+.header .row .column-02 {
+  width: 50%;
+}
+.header .row .column-02 {
+  position: absolute;
+  right: 0.5vw;
+  top: 3vw;
+}
+.header .row .column-01 img {
+  aspect-ratio: 4 / 3;
+  width: 35vw;
+  object-fit: fill;
+}
+.header .row .column-02 img {
+  aspect-ratio: 16 / 9;
+  width: 25vw;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 4vw;
+  line-height: 4vw;
+}
+.navbar .fa-solid {
+  display: none;
+}
+.navbar ul {
+  float: right;
+}
+.navbar ul li {
+  display: inline-block;
+}
+.navbar ul li a,
+.navbar ul i {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  margin: 0 20px 0;
+}
+.navbar ul i {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.navbar ul li a {
+  font-size: 2vw;
+  font-family: "Kelly Slab", cursive;
+}
+.navbar ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  transition: 0.5s;
+  left: 0;
+  bottom: -5px;
+}
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+.space-01 {
+  height: 10vw;
+}
+.about {
+  margin: 0 2vw 0;
+}
+.about h1 {
+  font-size: 3vw;
+  font-family: "Kelly Slab", cursive;
+  text-shadow: 1px 1px #848484;
+}
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 100%;
+}
+.about .column-01 {
+  width: 60%;
+  margin: 0 0 20px 0;
+}
+.about .space-02 {
+  width: 5%;
+}
+.about .column-02 {
+  width: 35%;
+}
+.about .column-01 p {
+  transform: translateY(20%);
+  font-size: 2vw;
+  font-family: "Kelly Slab", cursive;
+  text-align: justify;
+}
+.about .column-02 img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: fill;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.gallery {
+  margin: 0 2.5vw 2vw;
+}
+.gallery h1 {
+  font-size: 3vw;
+  font-family: "Kelly Slab", cursive;
+  text-shadow: 1px 1px #848484;
+}
+.gallery .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.gallery .row .column {
+  flex: 30%;
+  max-width: 33.33%;
+  height: auto;
+  margin: 1vw 0;
+  padding: 0.5vw;
+}
+.gallery .row .column img {
+  display: block;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: fill;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2.5vw 3vw;
+}
+.pricing #title,
+.pricing .column {
+  flex: 30%;
+  max-width: 33.33%;
+  height: auto;
+  padding: 0.5vw;
+}
+.pricing #title h1 {
+  font-size: 3vw;
+  font-family: "Kelly Slab", cursive;
+  text-shadow: 1px 1px #848484;
+}
+.pricing #title p {
+  margin-top: 10px;
+}
+.pricing #title p,
+.pricing .column p {
+  font-size: 2vw;
+  font-family: "Kelly Slab", cursive;
+  text-align: justify;
+}
+.pricing .column .card {
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pricing .column .card h2 {
+  font-size: 3vw;
+  font-family: "Kelly Slab", cursive;
+  text-shadow: 1px 1px #848484;
+}
+.pricing .column .card #monthly-01,
+.pricing .column .card #annual-01 {
+  margin-top: 10px;
+}
+.pricing .column .card #monthly-price,
+.pricing .column .card #annual-price {
+  margin: 10px 0 5px;
+  font-size: 5vw;
+  font-weight: bolder;
+  font-family: "Kelly Slab", cursive;
+  text-align: center;
+  text-shadow: 1px 1px #848484;
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2.5vw 0;
+}
+.contact #other h1 {
+  font-size: 3vw;
+  font-family: "Kelly Slab", cursive;
+  text-shadow: 1px 1px #848484;
+}
+.contact #other p {
+  margin-top: 10px;
+  font-size: 2vw;
+  font-family: "Kelly Slab", cursive;
+}
+.contact #maps,
+.contact #other {
+  flex: 40%;
+  max-width: 50%;
+  height: 30vw;
+  padding: 0.5vw;
+}
+.contact #maps iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact #other .row {
+  margin-top: 15px;
+}
+.contact #other #address,
+.contact #other #phone,
+.contact #other #email {
+  font-size: 2vw;
+}
+.contact #other #address span,
+.contact #other #phone span,
+.contact #other #email span {
+  font-family: "Kelly Slab", cursive;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 7vw;
+  line-height: 7vw;
+  background-color: #000000;
+  color: white;
+  margin-top: 20px;
+  font-size: 2vw;
+  font-family: "Kelly Slab", cursive;
+  text-align: center;
+}
+footer #medsos,
+footer #up,
+footer #copyright {
+  flex: 33.33%;
+  width: 33.33%;
+}
+footer #medsos a {
+  margin: 0 1vw 0;
+  color: white;
+  text-decoration: none;
+}
+footer #copyright a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer #up a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .line {
+    width: 25%;
+  }
+  .navbar .fa-solid {
+    display: inline-block;
+  }
+  .navbar .fa-bars {
+    float: right;
+    color: white;
+    margin: 6vw 3vw 0;
+    cursor: pointer;
+  }
+  .navbar ul {
+    background: black;
+    position: fixed;
+    top: 0;
+    width: 100px;
+    right: -100px;
+    height: 100vh;
+    padding-top: 30px;
+    transition: linear 0.5s;
+  }
+  .navbar ul li {
+    margin: 5px 0;
+    display: block;
+  }
+  .header {
+    height: 17vw;
+  }
+  .header .row .column-02 {
+    top: 0;
+  }
+  .pricing #title {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .pricing .column {
+    margin: 5px 5px 0;
+    flex: 45%;
+    max-width: 45%;
+  }
+  .pricing #title p {
+    margin-top: 3px;
+  }
+  .pricing .column .card #price {
+    margin-bottom: 0;
+  }
+  .contact #maps,
+  .contact #other {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .contact #maps {
+    height: 200px;
+  }
+  .contact #other {
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .contact #other p {
+    margin-top: 5px;
+    font-size: 2vw;
+  }
+  .contact #other .row {
+    margin-top: 5px;
+  }
+  footer {
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 3vw;
+  }
+}
